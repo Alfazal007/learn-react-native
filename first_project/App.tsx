@@ -3,20 +3,24 @@ import {
     Text,
     SafeAreaView,
     View,
-    Button,
-    Alert,
+    StyleSheet,
 } from "react-native";
+import Apppro from "./Apppro";
 
 
 export default function App() {
     return (
         <SafeAreaView>
             <View>
-                <Text>Hello World!</Text>
+                <Text style={styles.whiteText}>Hello World!</Text>
             </View>
-            <Button title="click me" onPress={() => {
-                Alert.alert("button clicked")
-            }} />
+            <Apppro />
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    whiteText: {
+        color: "#FFFFFF"
+    }
+});
